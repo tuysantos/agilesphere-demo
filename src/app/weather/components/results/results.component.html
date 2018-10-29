@@ -1,0 +1,20 @@
+<table class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">City</th>
+    <th scope="col">6 AM</th>
+    <th scope="col">12 PM</th>
+    <th scope="col">6 PM</th>
+    <th scope="col">12 AM</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr class="rowData" *ngFor='let weather of cities' (click)="test(weather.city.id)">
+    <td scope="row">{{weather.city.name}}</td>
+    <td scope="row">{{findTemperatureByHour('06:00:00',weather.list) | round}} &deg;</td>
+    <td scope="row">{{findTemperatureByHour('12:00:00',weather.list) | round}} &deg;</td>
+    <td scope="row">{{findTemperatureByHour('18:00:00',weather.list) | round}} &deg;</td>
+    <td scope="row">{{findTemperatureByHour('00:00:00',weather.list) | round}} &deg;</td>
+  </tr>
+  </tbody>
+</table>

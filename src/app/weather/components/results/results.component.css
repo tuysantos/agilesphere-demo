@@ -1,0 +1,7 @@
+.rowData {
+    cursor: pointer;
+}
+
+.rowData:hover {
+    background-color: #c0c0c0;
+}
